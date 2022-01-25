@@ -1,15 +1,18 @@
 import { Header } from "./components/header/Header";
 import { List } from "./components/list/List";
 import {Map}   from "./components/map/Map"
-
+import {CssBaseline,Grid } from "@material-ui/core"
 function App() {
   return (
-    <div>
+    <>
+    <CssBaseline/>
     <Header/>
-    <List/>
-    <Map/>
+    <Grid container spacing ={2} style ={{width:'100%'}}>
+          <Grid item xs={12} md={4}><List/></Grid>
+          <Grid item xs={12} md ={8}><Map/></Grid>
+    </Grid>
       
-    </div>
+    </>
   );
 }
 
